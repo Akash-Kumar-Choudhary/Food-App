@@ -37,10 +37,8 @@ app.use((req, res , next) => {
 app.use("/api", mealRouter);
 
 
-app.get('*' , function( req , res){
-  res.sendFile(
-    path.join(__dirname , "./frontend/build" , "intex.html"),
-  )
+app.get('/' , function( req , res){
+  res.status(200).send('Fooda-app')
 })
 
 
